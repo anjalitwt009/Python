@@ -26,27 +26,9 @@ A=list(map(int, input().split(' ')[:n-1]))
 print(A)
 
 A.sort()
-A.append(n+1)
-A
+A.append(n+1)   #Alternatively: A.append(0)
 
 for i in range(n):
   if A[i]!=(i+1):
     print(i+1)
     break
-
-B=[]
-for i in range(n):
-  B.append(i+1)
-
-print(list(set(B)-set(A)))
-
-#Alternatively:
-
-def list_diff(list1, list2):
-    out = []
-    for ele in list1:
-        if not ele in list2:
-            out.append(ele)
-    return out
-
-print(list_diff(B,A))
