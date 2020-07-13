@@ -36,6 +36,7 @@ for i in range(n):
   else:
     B.append(A[i-(d+1)])
 
+#Alternatively, since python has negative indexing
 C=[]
 for i in range(n):
   C.append(A[i-(d+1)])
