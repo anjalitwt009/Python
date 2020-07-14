@@ -44,8 +44,8 @@ def single_rep(A,n):
   
   print(C)
 
+n=int(input())
 print("Enter the array elements unsorted order")
 A=list((input().split(' ')[:n]))
 print(A)
-n=len(A)
 single_rep(A,n)
