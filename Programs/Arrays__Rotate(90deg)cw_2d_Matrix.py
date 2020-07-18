@@ -54,4 +54,4 @@ for i in range(n):
   matrix.append(a)
 # matrix = [[int(input()) for x in range (n)] for y in range(n)] 
 print(matrix)
-rotate_new(matrix,n)
+rotate(matrix,n)
