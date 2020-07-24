@@ -71,15 +71,15 @@ def sub_array(A,k):
       if ((A[i]) <= k):
         SA.append(A[i])
       else:
-        sum=sum+check_four(SA)
+        sum=sum+check_ele(SA,k)
         c=i+1
         break
   print("SUM= ",sum)
 
-def check_four(SA):
+def check_ele(SA,k):
   count=0
   for i in range(len(SA)):
-    if A[i]==4:
+    if A[i]==k:
       count=count+1
       break
   if count>0:
