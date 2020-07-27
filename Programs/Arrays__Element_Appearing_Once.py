@@ -28,7 +28,13 @@ A=[2,2,5,5,20,30,30]
 
 20
 """
-
+def element_once1(A):
+    A.append(0)
+    for i in range(1,len(A),2):
+        if A[i]==A[i-1]:
+            print(A[i-1])
+            break
+    
 def element_once(A):
   n=len(A)
   D={}
