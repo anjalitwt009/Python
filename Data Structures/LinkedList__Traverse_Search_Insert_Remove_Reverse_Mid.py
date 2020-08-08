@@ -34,7 +34,7 @@ class LinkedList:
     presentNode=self.head
     new_data=Node(data)
     if (presentNode==None):
-      self.head=newdata
+      self.head=new_data
       return 0
     while (presentNode.reference!=None):
       presentNode=presentNode.reference
