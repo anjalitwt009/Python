@@ -39,6 +39,8 @@ class LinkedList:
     while (presentNode.reference!=None):
       presentNode=presentNode.reference
     presentNode.reference=new_data
+    return self.head
+
   def insert_between(self,insert_data,new_data):
     print("--------INSERTING NODE AFTER {}---------".format(insert_data.data))
     presentNode=self.head
@@ -50,6 +52,7 @@ class LinkedList:
       presentNode.reference=new_data
     except:
       print("ERROR INSERTING")
+    
   def remove(self,rem_data):
     print("--------REMOVING NODE---------")
     presentNode=self.head
@@ -57,6 +60,7 @@ class LinkedList:
       if (presentNode.reference==rem_data):
         presentNode.reference=rem_data.reference
       presentNode=presentNode.reference
+   
   def finding_mid(self):
     print("--------FINDING THE MIDDLE ELEMENT---------")
     count=0
