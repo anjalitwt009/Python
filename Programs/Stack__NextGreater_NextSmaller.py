@@ -91,7 +91,7 @@ class Stack:
     else:
       return self.stack.pop()
   
-  def size(self):
+  def size_stack(self):
     size=len(self.stack)
     return size
 
@@ -115,16 +115,16 @@ def NextLarger(A):
   out_arr=[]
   s=Stack(len(A))
   for i in range(len(A)-1,-1,-1):
-    if s.size==0:
+    if s.size_stack()==0:
       out_arr.append(-1)
-    elif s.size>0 and s.top()>A[i]:
+    elif s.size_stack()>0 and s.top()>A[i]:
       out_arr.append(s.top())
-    elif s.size>0 and s.top()<A[i]:
-      while (s.size>0 and s.top()<A[i]):
+    elif s.size_stack()>0 and s.top()<A[i]:
+      while (s.size_stack()>0 and s.top()<A[i]):
         s.pop()
         if s.pop()==-1:
           break
-      if s.size==0:
+      if s.size_stack()==0:
         out_arr.append(-1)
       else:
         out_arr.append(s.top())
@@ -136,12 +136,12 @@ def NextSmaller(A):
   out_arr=[]
   s=Stack(len(A))
   for i in range(len(A)-1,-1,-1):
-    if s.size==0:
+    if s.size_stack()==0:
       out_arr.append(-1)
-    elif s.size>0 and s.top()<A[i]:
+    elif s.size_stack()>0 and s.top()<A[i]:
       out_arr.append(s.top())
-    elif s.size>0 and s.top()>A[i]:
-      while (s.size>0 and s.top()>A[i]):
+    elif s.size_stack()>0 and s.top()>A[i]:
+      while (s.size_stack()>0 and s.top()>A[i]):
         s.pop()
         if s.pop()==-1:
           break
