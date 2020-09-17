@@ -82,14 +82,16 @@ class Stack:
       return 0
 
   def top(self):
+    A=[]
     if len(self.stack)>0:
       #print (len(self.stack))
-      A=[]
       A.append(self.stack[len(self.stack)-1]) 
       A.append(self.index[len(self.stack)-1])
       return A
     else:
-      return -1
+      A.append(-1)
+      A.append(-1)
+      return A
 
 def stock_span(A):
   out_arr=[]
