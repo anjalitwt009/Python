@@ -104,9 +104,9 @@ def NSL_index(A):
     elif s.size_stack()>0 and s.top()[0]<A[i]:
       out_arr.append(s.top()[0])
       out_index.append(i-1)
-    elif s.size_stack()>0 and s.top()[0]>A[i]:
+    elif s.size_stack()>0 and s.top()[0]>=A[i]:
       while (s.size_stack()>0):
-        if (s.top()[0]>A[i]):
+        if (s.top()[0]>=A[i]):
           s.pop()
           #print(s.size_stack())
         else:
@@ -133,9 +133,9 @@ def NSR_index(A):
     elif s.size_stack()>0 and s.top()[0]<A[i]:
       out_arr.append(s.top()[0])
       out_index.append(i+1)
-    elif s.size_stack()>0 and s.top()[0]>A[i]:
+    elif s.size_stack()>0 and s.top()[0]>=A[i]:
       while (s.size_stack()>0):
-        if (s.top()[0]>A[i]):
+        if (s.top()[0]>=A[i]):
           s.pop()
           #print(s.size_stack())
         else:
