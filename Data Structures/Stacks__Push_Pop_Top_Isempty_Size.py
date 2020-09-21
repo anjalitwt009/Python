@@ -23,6 +23,25 @@ class Stack:
       printf("STACK IS EMPTY")
     else:
       return self.stack.pop()
+  def size_stack(self):
+    size=len(self.stack)
+    return size
+
+  def isempty(self):
+    x=self.size
+    if x==0:
+      print("Stack is empty")
+      return 1
+    else:
+      print("Not empty")
+      return 0
+
+  def top(self):
+    if len(self.stack)>0:
+      #print (len(self.stack))
+      return self.stack[len(self.stack)-1]
+    else:
+      return -1
 
 A=Stack(3)
 A.push(6)
