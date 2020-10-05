@@ -33,7 +33,7 @@ def knap_01(wt,val,W,n):
     t[n][W]=max((val[n-1]+knap_01(wt,val,W-wt[n-1],n-1)),knap_01(wt,val,W,n-1))
     return t[n][W]
   else:
-    knap_01(wt,val,W,n-1)
+    t[n][W]=knap_01(wt,val,W,n-1)
     return t[n][W]
 
 val = [60, 100, 120] 
