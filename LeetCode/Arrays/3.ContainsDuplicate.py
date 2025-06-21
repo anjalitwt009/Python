@@ -68,3 +68,17 @@ def containsDuplicate(self, nums):
         if len(s) != len(nums):
             return True
         return False
+
+def containsDuplicate(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: bool
+        """
+        d = {}
+        for i in range(len(nums)):
+            if nums[i] in d:
+                d[nums[i]]+=1
+                return True
+            else:
+                d[nums[i]] = 1
+        return False
